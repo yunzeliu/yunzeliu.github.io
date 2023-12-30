@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Interactive Humanoid: Online Full-Body Motion Reaction Synthesis with Social Affordance Canonicalization and Forecasting.">
+  <meta name="keywords" content="reaction, interaction">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <title>Interactive Humanoid: Online Full-Body Motion Reaction Synthesis with Social Affordance Canonicalization and Forecasting</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size:40px">Interactive Humanoid: Online Full-Body Motion Reaction Synthesis with Social Affordance Canonicalization and Forecasting</h1>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href=""></a>,</span> -->
+            <!-- <span class="author-block">
+              <a>Wenqian Zhang</a>,</span>
+            <span class="author-block">
+              <a>Wenxuan Li</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.yu-jingyi.com/">Jingyi Yu</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://xu-lan.com/">Lan Xu</a>,
+          </div> -->
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Submission</span>
+          </div>
+
+          <!-- <div class="column has-text-centered">
+            <div class="publication-links"> -->
+              
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2304.05684.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2304.05684.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/tr3e/InterGen"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1oyozJ4E7Sqgsr7Q747Na35tWo5CjNYk3?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (released)</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/teaser.gif"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> One man knocked the other down with a thumping leg
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<!-- <video controls>
+  <source src="./static/video/art.m4v" type="video/mp4">
+</video> -->
+
+<div style="display: flex; justify-content: center; align-items: center; ">
+  <video controls style="max-width: 70%; height: auto;">
+    <source src="./static/video/art1080.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+
+    <h2 class="subtitle has-text-centered">
+      <span class="prompt">Results on <span style="color: purple;">HHI </span> dataset. The <span style="color: purple;">red</span> one is the generated reaction.
+    </h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+
+    <h2 class="subtitle has-text-centered">
+      <span class="prompt">Results on <span style="color: purple;">CoChair</span> dataset. The <span style="color: purple;">red</span>  one is the generated reaction.
+    </h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+
+    <h2 class="subtitle has-text-centered">
+      <span class="prompt">Results on our proposed <span style="color: purple;">CoChair</span> dataset. The red one is the generated reaction.
+    </h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair1.mp4"
+                    type="video/mp4">
+          </video>
+        </div> 
+        <div class="item item-chair-tp">
+          <video poster="" id="1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair3.mp4"
+                    type="video/mp4">
+          </video>
+        <!-- </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/video/chair.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+        <!-- <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/latin/55.mp4"
+                    type="video/mp4"> 
+           </video>
+        </div>  -->
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We focus on the human-humanoid interaction task optionally with an object. We propose a new task named online full-body motion reaction synthesis, which generates humanoid reactions based on the human actor's motions. The previous work only focuses on human interaction without objects and generates body reactions without hand. Besides, they also do not consider the task as an online setting, which means the inability to observe information beyond the current moment in practical situations. 
+To support this task, we construct two datasets named HHI and CoChair and propose a unified method. Specifically, we propose to construct a social affordance representation. We first select a social affordance carrier and use SE(3)-Equivariant Neural Networks to learn the local frame for the carrier, then we canonicalize the social affordance. Besides, we propose a social affordance forecasting scheme to enable the reactor to predict based on the imagined future.
+Experiments demonstrate that our approach can effectively generate high-quality reactions on HHI and CoChair. Furthermore, we also validate our method on existing human interaction datasets Interhuman and Chi3D.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video.
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img id="teaser" width="100%" src="./static/images/ihuman.png" margin: 0 auto;></center>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img id="teaser" width="120%" src="./static/images/pipeline1.png" margin: 0 auto;></center>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img id="teaser" width="120%" src="./static/images/pipeline2.png" margin: 0 auto;></center>
+    </div>
+  </div>
+</section> -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Social Affordance Canonicalization</h2>
+        <div class="content has-text-justified">
+          <p>
+            Given a sequence, we first select a social affordance carrier and build the carrier-centric representation. Then we can compute the social affordance representation. We propose to learn the local frame for carrier and canonicalize social affordance to simplify the distribution. Then a motion encoder and decoder are used to generate reactions.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img id="teaser" width="100%" src="./static/images/pipeline2.png" margin: 0 auto;></center>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Social Affordance Forecasting</h2>
+        <div class="content has-text-justified">
+          <p>
+            At the training stage, the humanoid reactor can access all motions of the actor. At the prediction stage in the real world, the humanoid reactor can only observe the past motions of the human actor. The forecasting module can anticipate the motions that the human will take.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img id="teaser" width="100%" src="./static/images/pipeline1.png" margin: 0 auto;></center>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liang2023intergen,
+      title={InterGen: Diffusion-based Multi-human Motion Generation under Complex Interactions},
+      author={Liang, Han and Zhang, Wenqian and Li, Wenxuan and Yu, Jingyi and Xu, Lan},
+      journal={arXiv preprint arXiv:2304.05684},
+      year={2023}
+    }</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The source code are borrowed from the <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>  and <a
+              href="https://tr3e.github.io/intergen-page/">InterGen</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
