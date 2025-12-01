@@ -1,10 +1,560 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=https://scholar.google.com/citations?user=xYVEg0cAAAAJ&hl=en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunze Liu - Tsinghua University</title>
+    <style>
+        /* --- 基础设置 --- */
+        :root {
+            --primary-color: #2c3e50;
+            --link-color: #3498db;
+            --bg-color: #fcfcfc;
+            --sidebar-width: 300px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: #444;
+            line-height: 1.6;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+        a:hover { text-decoration: underline; color: #1d6fa5; }
+        h1, h2, h3 { color: var(--primary-color); font-weight: 600; margin-top: 0; }
+        
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+
+        /* --- 左侧边栏 (Sidebar) --- */
+        aside {
+            width: var(--sidebar-width);
+            background-color: #f8f9fa;
+            padding: 40px 30px;
+            border-right: 1px solid #eee;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .name { font-size: 1.8em; margin-bottom: 5px; color: #2c3e50; }
+        .title { font-size: 0.95em; color: #666; margin-bottom: 20px; font-weight: 500;}
+        
+        .contact-info { font-size: 0.9em; margin-bottom: 30px; text-align: left; margin-left: 10px; }
+        .contact-info p { margin: 8px 0; display: flex; align-items: center; }
+        .contact-icon { margin-right: 10px; min-width: 20px; text-align: center;}
+        
+        /* Sidebar Education Section */
+        .education-section { text-align: left; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px; margin-left: 10px; }
+        .edu-item { margin-bottom: 15px; font-size: 0.9em; }
+        .edu-school { font-weight: bold; color: #333; display: block; }
+        .edu-degree { color: #555; display: block; }
+        .edu-year { color: #888; font-size: 0.85em; }
+
+        /* Sidebar Experience Section */
+        .experience-section { text-align: left; margin-top: 25px; border-top: 1px solid #ddd; padding-top: 18px; margin-left: 10px; }
+        .exp-item { margin-bottom: 10px; font-size: 0.9em; }
+        .exp-company { font-weight: bold; color: #333; display: block; }
+        .exp-role { color: #555; display: block; }
+        .exp-year { color: #888; font-size: 0.85em; }
+
+        /* --- 右侧主内容 (Main) --- */
+        main {
+            flex: 1;
+            padding: 50px 60px;
+        }
+
+        .section-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            margin-top: 50px;
+            font-size: 1.5em;
+        }
+        .section-header:first-of-type { margin-top: 0; }
+
+        .bio-text { font-size: 1.05em; color: #333; margin-bottom: 30px; text-align: justify;}
+
+        /* News List */
+        .news-container {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #fdfdfd;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .news-list { list-style: none; padding: 0; margin: 0; }
+        .news-list li { margin-bottom: 10px; font-size: 0.95em; display: flex; }
+        .news-list li:last-child { margin-bottom: 0; }
+        .news-date { font-weight: bold; min-width: 85px; color: #666; font-family: monospace; }
+
+        /* Publications */
+        .publication-item {
+            display: flex;
+            margin-bottom: 35px;
+            align-items: flex-start;
+        }
+        
+        .pub-thumb {
+            width: 200px;
+            flex-shrink: 0;
+            margin-right: 25px;
+        }
+        .pub-thumb img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .pub-thumb img:hover { transform: scale(1.02); }
+
+        .pub-content { flex: 1; }
+        .pub-title { font-size: 1.1em; font-weight: 700; color: #222; display: block; margin-bottom: 6px; }
+        .pub-authors { font-size: 0.95em; color: #555; margin-bottom: 6px; }
+        .pub-venue { font-style: italic; color: #666; font-size: 0.9em; margin-bottom: 8px; }
+        .pub-desc { font-size: 0.9em; color: #666; margin-bottom: 8px; line-height: 1.5; }
+        .pub-links a { font-size: 0.85em; margin-right: 12px; font-weight: 600; text-transform: uppercase; color: #1e6bb8; }
+        
+        .me { color: #000; font-weight: bold; border-bottom: 1px solid #bbb; }
+        .highlight-venue { color: #c0392b; font-weight: bold; font-style: normal; }
+
+        /* Services List */
+        .service-list { list-style: disc; padding-left: 20px; color: #555; }
+        .service-list li { margin-bottom: 5px; }
+
+        /* Mobile */
+        @media (max-width: 850px) {
+            .container { flex-direction: column; }
+            aside { width: auto; border-right: none; border-bottom: 1px solid #eee; padding: 30px; }
+            main { padding: 30px 20px; }
+            .publication-item { flex-direction: column; }
+            .pub-thumb { width: 100%; max-width: 300px; margin-bottom: 15px; }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, please click here: <a href="https://scholar.google.com/citations?user=xYVEg0cAAAAJ&hl=en">Google Scholar Profile</a></p>
+
+<div class="container">
+    
+    <aside>
+        <img src="images/yunze_photo.jpg" alt="Yunze Liu" class="profile-photo">
+        
+        <h1 class="name">Yunze Liu<br><span style="font-size:0.6em; font-weight:400;">(刘昀泽)</span></h1>
+        <div class="title">
+            Ph.D. Student @ Tsinghua University<br>
+            AI Researcher @ Memories.ai
+        </div>
+
+        <div class="contact-info">
+            <p><span class="contact-icon">📍</span> Beijing, China</p>
+            <p><span class="contact-icon">✉️</span> <a href="mailto:liuyzchina@gmail.com">Email</a></p>
+            <p><span class="contact-icon">🎓</span> <a href="https://scholar.google.com/citations?user=xYVEg0cAAAAJ&hl=en">Google Scholar</a></p>
+            <p><span class="contact-icon">💻</span> <a href="https://github.com/yunzeliu/">GitHub</a></p>
+        </div>
+
+        <div class="education-section">
+            <div class="edu-item">
+                <span class="edu-school">Tsinghua University</span>
+                <span class="edu-degree">Ph.D. in Computer Science</span>
+                <span class="edu-year">2022 - Present</span>
+            </div>
+
+        </div>
+
+        <div class="experience-section">
+            <div class="exp-item">
+                <span class="exp-company">Memories.ai</span>
+                <span class="exp-role">Mumber of Technical Staff, AI Memory</span>
+                </span>
+                <span class="exp-year">Feb 2025 - Present</span>
+            </div>
+
+            <div class="exp-item">
+                <span class="exp-company">Microsoft Research Asia</span>
+                <span class="exp-role">Research Intern, Human-Object Interaction</span>
+                <span class="exp-year">Aug 2024 - Feb 2025</span>
+            </div>
+
+        </div>
+    </aside>
+
+    <main>
+        
+        <h2 class="section-header">About Me</h2>
+        <div class="bio-text">
+            <p>
+                I am a fourth-year Ph.D. student at the <a href="https://iiis.tsinghua.edu.cn/en/">Institute for Interdisciplinary Information Sciences (IIIS)</a>, Tsinghua University, advised by Prof. <a href="https://iiis.tsinghua.edu.cn/en/People/Faculty/YiLi.htm">Li Yi (弋力)</a>.
+            </p>
+            <p>
+                I also work as an AI Researcher at <a href="https://www.memories.ai/">Memories.ai</a>, working with Prof. <a href="https://shawnshenjx.github.io/">Shawn Shen</a> (University of Bristol). 
+            </p>
+            <p>
+                My research interests lie in <strong>4D Human-Object Interaction (HOI)</strong>, <strong>Embodied AI</strong>, and <strong>Multimodal Large Language Models (MLLMs)</strong>. I am passionate about equipping robots with the ability to understand and interact with the dynamic 4D world.
+            </p>
+        </div>
+
+        <h2 class="section-header">News</h2>
+        <div class="news-container">
+            <ul class="news-list">
+                <li><span class="news-date">Nov 2025</span> Two paper accepted to <strong>&nbsp;WACV 2026</strong>.</li>
+                <li><span class="news-date">Jun 2025</span> <strong>HOI4D&nbsp;</strong> dataset surpassed <strong>&nbsp;200+&nbsp;</strong> citations.</li>
+                <li><span class="news-date">Aug 2025</span> One paper accepted to <strong>&nbsp;ACM MM 2025</strong>.</li>
+                <li><span class="news-date">Jul 2025</span> One paper accepted to <strong>&nbsp;ICCV 2025</strong>.</li>
+                <li><span class="news-date">Jul 2025</span> One paper accepted to <strong>&nbsp;EMNLP 2025</strong>.</li>
+                <li><span class="news-date">May 2025</span> One paper accepted to <strong>&nbsp;UAI 2025</strong>.</li>
+                <li><span class="news-date">Feb 2025</span> Two paper accepted to <strong>&nbsp;CVPR 2025</strong>.</li>
+                <li><span class="news-date">Nov 2024</span> One paper accepted to <strong>&nbsp;3DV 2025</strong>.</li>
+                <li><span class="news-date">Jul 2024</span> One paper accepted to <strong>&nbsp;ACM MM 2024 (Oral)</strong>.</li>
+                <li><span class="news-date">Feb 2024</span> One paper accepted to <strong>&nbsp;CVPR 2024</strong>.</li>
+                <li><span class="news-date">Jan 2024</span> One paper accepted to <strong>&nbsp;ICRA 2024</strong>.</li>
+                <li><span class="news-date">Jul 2023</span> One paper accepted to <strong>&nbsp;ICCV 2023</strong>.</li>
+                <li><span class="news-date">Feb 2023</span> One paper accepted to <strong>&nbsp;CVPR 2023</strong>.</li>
+                <li><span class="news-date">Jul 2022</span> One paper accepted to <strong>&nbsp;ECCV 2022</strong>.</li>
+                <li><span class="news-date">Jul 2021</span> One paper accepted to <strong>&nbsp;ICCV 2021</strong>.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-header">Publications</h2>
+       
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/stthink.jpg" alt="ST-Think">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2503.12542" class="pub-title">ST-Think: How Multimodal Large Language Models Reason About 4D Worlds from Ego-Centric Videos</a>
+                <div class="pub-authors">
+                    Peiran Wu*, <span class="me">Yunze Liu*</span>, Miao Liu, Junxiao Shen
+                </div>
+                <div class="pub-venue">WACV, 2026</div>
+                <div class="pub-desc">
+                    Investigating how multimodal large language models understand and reason about dynamic 4D environments from ego-centric video inputs.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2503.12542">[Paper]</a> <a href="https://github.com/WPR001/Ego-ST">[Code]</a> <a href="https://huggingface.co/datasets/openinterx/Ego-ST-bench">[Huggingface]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/culture3d.jpg" alt="CULTURE3D">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2501.06927" class="pub-title">CULTURE3D: A Large-Scale and Diverse Dataset of Cultural Landmarks and Terrains for Gaussian-Based Scene Rendering</a>
+                <div class="pub-authors">
+                    Xinyi Zheng*, Steve Zhang*, Weizhe Lin, Aaron Zhang, Walterio W. Mayol-Cuevas, <span class="me">Yunze Liu^</span>, Junxiao Shen^
+                </div>
+                <div class="pub-venue">ICCV, 2025</div>
+                <div class="pub-desc">
+                    Introduces a 10-billion-point ultra-high-resolution drone dataset of 20 culturally significant landmarks and terrains, enabling large-scale Gaussian-based 3D scene reconstruction and benchmarking.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2501.06927">[Paper]</a> <a href="https://github.com/X-Intelligence-Labs/CULTURE3D">[Code]</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/xlebench.jpg" alt="X-LeBench">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2501.06835" class="pub-title">X-LeBench: A Benchmark for Extremely Long Egocentric Video Understanding</a>
+                <div class="pub-authors">
+                    Wenqi Zhou*, Kai Cao*, Hao Zheng, <span class="me">Yunze Liu</span>, Xinyi Zheng, Miao Liu, Per Ola Kristensson, Walterio W. Mayol-Cuevas, Fan Zhang, Weizhe Lin, Junxiao Shen
+                </div>
+                <div class="pub-venue">EMNLP (Findings), 2025</div>
+                <div class="pub-desc">
+                    Builds a life-logging simulation pipeline and benchmark with 432 ultra-long egocentric video logs (23 minutes–16.4 hours) to stress-test multimodal LLMs on temporal reasoning, memory, and context aggregation.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2501.06835">[Paper]</a> <a href="https://github.com/X-Intelligence-Labs/X-LeBench">[Code]</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/onlinehoi.jpg" alt="OnlineHOI">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2509.12250" class="pub-title">OnlineHOI: Towards Online Human-Object Interaction Generation and Perception</a>
+                <div class="pub-authors">
+                    Yihong Ji, <span class="me">Yunze Liu</span>, Yiyao Zhuo, Weijiang Yu, Fei Ma, Joshua Huang, Fei Yu
+                </div>
+                <div class="pub-venue">ACM Multimedia (ACM MM), 2025</div>
+                <div class="pub-desc">
+                    Presents an online framework that jointly predicts future human motions and perceives object states for streaming HOI scenarios.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2509.12250">[Paper]</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/mutualnerf.jpg" alt="UAI 2025">
+            </div>
+            <div class="pub-content">
+                <a href="#" class="pub-title">MutualNeRF: Improve the Performance of NeRF under Limited Samples with Mutual Information Theory</a>
+                <div class="pub-authors">
+                    Zifan Wang, Jingwei Li, Yitang Li, <span class="me">Yunze Liu^</span>
+                </div>
+                <div class="pub-venue">Uncertainty in Artificial Intelligence (UAI), 2025</div>
+                <div class="pub-desc">
+                    Proposes MutualNeRF, a mutual-information-driven framework that improves NeRF under limited views via MI-guided sparse view sampling and few-shot regularization in both semantic and pixel spaces.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2505.11386">[Paper]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/map.jpg" alt="MAP">
+            </div>
+            <div class="pub-content">
+                <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_MAP_Unleashing_Hybrid_Mamba-Transformer_Vision_Backbones_Potential_with_Masked_Autoregressive_CVPR_2025_paper.pdf" class="pub-title">MAP: Unleashing Hybrid Mamba-Transformer Vision Backbone's Potential with Masked Autoregressive Pretraining</a>
+                <div class="pub-authors">
+                    <span class="me">Yunze Liu</span>, Li Yi
+                </div>
+                <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</div>
+                <div class="pub-desc">
+                    Introduces Masked Autoregressive Pretraining that jointly optimizes Mamba and Transformer blocks via local MAE-style reconstruction and global autoregressive generation, yielding state-of-the-art hybrid vision backbones.
+                </div>
+                <div class="pub-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_MAP_Unleashing_Hybrid_Mamba-Transformer_Vision_Backbones_Potential_with_Masked_Autoregressive_CVPR_2025_paper.pdf">[Paper]</a> <a href="https://github.com/yunzeliu/MAP">[Code]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/mobileh2r.jpg" alt="MobileH2R">
+            </div>
+            <div class="pub-content">
+                <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_MobileH2R_Learning_Generalizable_Human_to_Mobile_Robot_Handover_Exclusively_from_CVPR_2025_paper.pdf" class="pub-title">MobileH2R: Learning Generalizable Human to Mobile Robot Handover Exclusively from Scalable and Diverse Synthetic Data</a>
+                <div class="pub-authors">
+                    Zifan Wang*, Ziqing Chen*, Junyu Chen*, Jilong Wang, Yuxin Yang, <span class="me">Yunze Liu</span>, Xueyi Liu, He Wang, Li Yi
+                </div>
+                <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</div>
+                <div class="pub-desc">
+                    Scales 100K+ synthetic handover scenes and distills them through 4D imitation learning into safe, generalizable mobile robot policies that outperform baselines by at least 15% success in sim and real.
+                </div>
+                <div class="pub-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_MobileH2R_Learning_Generalizable_Human_to_Mobile_Robot_Handover_Exclusively_from_CVPR_2025_paper.pdf">[Paper]</a> <a href="https://MobileH2R.github.io">[Project]</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/interactive_humanoid.jpg" alt="3DV 2025">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2312.08983" class="pub-title">Interactive Humanoid: Online Full-Body Motion Reaction Synthesis with Social Affordance Canonicalization and Forecasting</a>
+                <div class="pub-authors">
+                    <span class="me">Yunze Liu</span>, Changxi Chen, Li Yi
+                </div>
+                <div class="pub-venue">International Conference on 3D Vision (3DV), 2025</div>
+                <div class="pub-desc">
+                    Proposed a framework for synthesizing physically plausible humanoid reactions using forward dynamics guidance and social affordance forecasting.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2312.08983">[Paper]</a>
+                    <a href="https://github.com/yunzeliu/Interactive-Humanoid">[Code]</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/physreaction.jpg" alt="ACM MM 2024">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2404.01081" class="pub-title">PhysReaction: Physically Plausible Real-Time Humanoid Reaction Synthesis via Forward Dynamics Guided 4D Imitation</a>
+                <div class="pub-authors">
+                    <span class="me">Yunze Liu</span>, Changxi Chen, Chen Ding, Li Yi
+                </div>
+                <div class="pub-venue">ACM Multimedia (ACM MM), 2024 <span class="highlight-venue">(Oral Presentation)</span></div>
+                <div class="pub-desc">
+                    Leveraging forward dynamics to guide 4D imitation learning for realistic humanoid reactions.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2404.01081">[Paper]</a> <a href="https://yunzeliu.github.io/PhysReaction/">[Project Page]</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/crossvideo.jpg" alt="ICRA 2024">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2401.09057" class="pub-title">CrossVideo: Self-supervised Cross-modal Contrastive Learning for Point Cloud Video Understanding</a>
+                <div class="pub-authors">
+                    <span class="me">Yunze Liu</span>, Changxi Chen, Zifan Wang, Li Yi
+                </div>
+                <div class="pub-venue">IEEE International Conference on Robotics and Automation (ICRA), 2024</div>
+                <div class="pub-desc">
+                    Introduces CrossVideo, a self-supervised cross-modal contrastive learning framework for point cloud video understanding.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2401.09057">[Paper]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/denoising.jpg" alt="CVPR 2024">
+            </div>
+            <div class="pub-content">
+                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Luo_Physics-Aware_Hand-Object_Interaction_Denoising_CVPR_2024_paper.pdf" class="pub-title">Physics-aware Hand-object Interaction Denoising</a>
+                <div class="pub-authors">
+                    Haoping Luo, <span class="me">Yunze Liu</span>, Li Yi
+                </div>
+                <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024</div>
+                <div class="pub-desc">
+                    Proposes a physics-aware hand-object interaction denoising framework that leverages physical constraints to improve the accuracy of hand-object interaction predictions.
+                </div>
+                <div class="pub-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Luo_Physics-Aware_Hand-Object_Interaction_Denoising_CVPR_2024_paper.pdf">[Paper]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/leaf.jpg" alt="ICCV 2023">
+            </div>
+            <div class="pub-content">
+                <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_LeaF_Learning_Frames_for_4D_Point_Cloud_Sequence_Understanding_ICCV_2023_paper.pdf" class="pub-title">LeaF: Learning Frames for 4D Point Cloud Sequence Understanding</a>
+                <div class="pub-authors">
+                    <span class="me">Yunze Liu</span>, Junyu Chen, Zekun Zhang, Jingwei Huang, Li Yi
+                </div>
+                <div class="pub-venue">IEEE/CVF International Conference on Computer Vision (ICCV), 2023</div>
+                <div class="pub-desc">
+                    Introduces learnable frame representations to effectively capture temporal dynamics in 4D point cloud sequences.
+                </div>
+                <div class="pub-links">
+                    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_LeaF_Learning_Frames_for_4D_Point_Cloud_Sequence_Understanding_ICCV_2023_paper.pdf">[Paper]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/distillation.jpg" alt="CVPR 2023">
+            </div>
+            <div class="pub-content">
+                <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Zhang_Complete-to-Partial_4D_Distillation_for_Self-Supervised_Point_Cloud_Sequence_Representation_Learning_CVPR_2023_paper.pdf" class="pub-title">Complete-to-Partial 4D Distillation for Self-Supervised Point Cloud Sequence Representation Learning</a>
+                <div class="pub-authors">
+                    Zhuoyang Zhang, Yuhao Dong, <span class="me">Yunze Liu</span>, Li Yi
+                </div>
+                <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023</div>
+                <div class="pub-desc">
+                    Introduces a complete-to-partial 4D distillation framework that leverages self-supervised learning to improve the performance of point cloud sequence representation learning.
+                </div>
+                <div class="pub-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Zhang_Complete-to-Partial_4D_Distillation_for_Self-Supervised_Point_Cloud_Sequence_Representation_Learning_CVPR_2023_paper.pdf">[Paper]</a> <a href="https://github.com/dongyh20/C2P">[Code]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/ppt.jpg" alt="ECCV 2022">
+            </div>
+            <div class="pub-content">
+                <a href="https://arxiv.org/pdf/2208.00281" class="pub-title">Point Primitive Transformer for Long-Term 4D Point Cloud Video Understanding</a>
+                <div class="pub-authors">
+                    Hao Wen*, <span class="me">Yunze Liu*</span>, Jingwei Huang, Bo Duan, Li Yi <span style="font-size:0.8em; font-weight:normal;">(* Equal Contribution)</span>
+                </div>
+                <div class="pub-venue">European Conference on Computer Vision (ECCV), 2022</div>
+                <div class="pub-desc">
+                    Introduces a point primitive transformer for long-term 4D point cloud video understanding.
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2208.00281">[Paper]</a> <a href="https://github.com/hoi4d/PPTr">[Code]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/hoi4d.jpg" alt="CVPR 2022">
+            </div>
+            <div class="pub-content">
+                <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_HOI4D_A_4D_Egocentric_Dataset_for_Category-Level_Human-Object_Interaction_CVPR_2022_paper.pdf" class="pub-title">HOI4D: A 4D Egocentric Dataset for Category-Level Human-Object Interaction</a>
+                <div class="pub-authors">
+                    <span class="me">Yunze Liu</span>, Yun Liu, Che Jiang, Kangbo Lyu, Weikang Wan, Hao Shen, Boqiang Liang, Zhoujie Fu, He Wang, Li Yi
+                </div>
+                <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022</div>
+                <div class="pub-desc">
+                    Releases HOI4D, a large-scale egocentric 4D HOI dataset with category-level annotations that enables learning robust human-object interaction perception and manipulation policies.
+                </div>
+                <div class="pub-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_HOI4D_A_4D_Egocentric_Dataset_for_Category-Level_Human-Object_Interaction_CVPR_2022_paper.pdf">[Paper]</a> <a href="https://hoi4d.github.io/">[Project]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="pub-thumb">
+                <img src="images/tupleinfonce.jpg" alt="ICCV 2021">
+            </div>
+            <div class="pub-content">
+                <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Contrastive_Multimodal_Fusion_With_TupleInfoNCE_ICCV_2021_paper.pdf" class="pub-title">Contrastive Multimodal Fusion with TupleInfoNCE</a>
+                <div class="pub-authors">
+                    <span class="me">Yunze Liu</span>, Qingnan Fan, Shanghang Zhang, Hao Dong, Thomas Funkhouser, Li Yi
+                </div>
+                <div class="pub-venue">IEEE/CVF International Conference on Computer Vision (ICCV), 2021</div>
+                <div class="pub-desc">
+                    Introduces a contrastive multimodal fusion framework that leverages tuple-based contrastive learning to improve the performance of multimodal fusion.
+                </div>
+                <div class="pub-links">
+                    <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Contrastive_Multimodal_Fusion_With_TupleInfoNCE_ICCV_2021_paper.pdf">[Paper]</a> <a href="https://github.com/hoi4d/TupleInfoNCE">[Code]</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-header">Academic Services</h2>
+        <ul class="service-list">
+            <li><strong>Conference Reviewer:</strong> CVPR, ICCV, ECCV, ACM MM, ICLR, NeurIPS, ICML, 3DV, WACV, AAAI</li>
+            <li><strong>Journal Reviewer:</strong> TMM</li>
+        </ul>
+
+    </main>
+</div>
+
 </body>
 </html>
