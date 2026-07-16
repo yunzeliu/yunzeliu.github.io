@@ -38,86 +38,78 @@
     },
     {
       "benchmark": "videophy2",
-      "coverage_rate": 0.5651438240270727,
-      "covered_samples": 334,
+      "coverage_rate": 0.5685279187817259,
+      "covered_samples": 336,
       "label": "VideoPhy2",
       "policy_qualified_samples": 0,
-      "recovery_samples": 52,
-      "strict_prompt_groups": 334,
+      "recovery_samples": 54,
+      "strict_prompt_groups": 336,
       "total_samples": 591,
-      "uncovered_samples": 257,
-      "unique_verified_videos": 326
+      "uncovered_samples": 255,
+      "unique_verified_videos": 328
     }
   ],
-  "candidate_source_distribution": [
-    {
-      "covered_samples": 748,
-      "key": "base_scheduler",
-      "sample_share": 0.9012048192771084,
-      "strict_prompt_groups": 730,
-      "unique_verified_videos": 704
-    },
-    {
-      "covered_samples": 59,
-      "key": "already_downloaded_public_youtube",
-      "sample_share": 0.07108433734939759,
-      "strict_prompt_groups": 55,
-      "unique_verified_videos": 55
-    },
+  "data_source_distribution": [
     {
       "covered_samples": 16,
-      "key": "wisa80k_testing_rag_v1",
-      "sample_share": 0.01927710843373494,
+      "key": "WISA80K",
+      "label_en": "WISA80K",
+      "label_zh": "WISA80K",
+      "sample_share": 0.019230769230769232,
       "strict_prompt_groups": 10,
-      "unique_verified_videos": 10
+      "unique_verified_videos": 10,
+      "video_share": 0.01297016861219196
     },
     {
-      "covered_samples": 7,
-      "key": "downloaded_historical_reject_risk_recheck",
-      "sample_share": 0.008433734939759036,
-      "strict_prompt_groups": 5,
-      "unique_verified_videos": 4
+      "covered_samples": 816,
+      "key": "Other",
+      "label_en": "Other",
+      "label_zh": "其他数据",
+      "sample_share": 0.9807692307692307,
+      "strict_prompt_groups": 792,
+      "unique_verified_videos": 761,
+      "video_share": 0.9870298313878081
     }
   ],
-  "generated_at_utc": "2026-07-16T14:36:28.619593Z",
+  "generated_at_utc": "2026-07-16T15:21:21.580974Z",
   "headline": {
-    "median_duration_seconds": 38.0,
-    "prompt_group_coverage_rate": 0.43057050592034446,
-    "prompt_groups_incomplete": 1058,
+    "median_duration_seconds": 39.0,
+    "prompt_group_coverage_rate": 0.4316469321851453,
+    "prompt_groups_incomplete": 1056,
     "prompt_groups_total": 1858,
     "raw_downloaded_unique_files": 9863,
-    "sample_coverage_rate": 0.4164576016056197,
-    "sample_video_edges": 830,
-    "samples_complete": 830,
-    "samples_incomplete": 1163,
+    "sample_coverage_rate": 0.41746111389864526,
+    "sample_video_edges": 832,
+    "samples_complete": 832,
+    "samples_incomplete": 1161,
     "samples_total": 1993,
-    "strict_prompt_groups": 800,
-    "unique_verified_videos": 769,
-    "verified_duration_hours": 24.87472222222222,
-    "verified_file_bytes": 17824872502,
-    "verified_to_raw_rate": 0.077968163844672
+    "strict_prompt_groups": 802,
+    "unique_verified_videos": 771,
+    "verified_duration_hours": 24.9075,
+    "verified_file_bytes": 17842352620,
+    "verified_to_raw_rate": 0.07817094190408598
   },
   "latest_recovery_wave": {
-    "epoch_id": "existing_risk_recheck_nonpai_v4_20260716",
-    "nonpasses": 47,
+    "epoch_id": "existing_risk_recheck_nonpai_v5_20260716",
+    "nonpasses": 46,
     "pending_pai": 0,
     "publication_state": "published",
-    "quality_database_snapshot_sha256": "f55d5deca521f099b83f9f63e797cdd76e80d8a1b6cc3140556313645dea51d0",
+    "quality_database_snapshot_sha256": "a2ad6be7b8b5e628564d271ce114d463f19a96a91f2aa379f472f2c2b6c69fd5",
     "status": "complete",
-    "strict_promotions": 1
+    "strict_promotions": 2
   },
   "qualification_distribution": [
     {
-      "covered_samples": 562,
+      "covered_samples": 564,
       "key": "direct_strict",
-      "sample_share": 0.6771084337349398,
-      "strict_prompt_groups": 532,
-      "unique_verified_videos": 516
+      "sample_share": 0.6778846153846154,
+      "strict_prompt_groups": 534,
+      "unique_verified_videos": 518
     },
     {
       "covered_samples": 268,
       "key": "pai_policy_override",
-      "sample_share": 0.3228915662650602,
+      "sample_share": 0.32211538461538464,
       "strict_prompt_groups": 268,
       "unique_verified_videos": 262
     }
@@ -125,8 +117,8 @@
   "quality_pipeline": {
     "approved_pair_judgments": 730,
     "final_checks_counted": 6246,
-    "groups_exhausted_after_5": 700,
-    "groups_needing_more_search": 720,
+    "groups_exhausted_after_5": 698,
+    "groups_needing_more_search": 718,
     "judgment_rows": 6246,
     "pai_supplemental_review_required": false,
     "pending_downloaded_pairs": 7776,
@@ -137,158 +129,65 @@
       "benchmark": "paibench_g",
       "sha256": "5a353ac5307af49b88aed886d7bea310caf4de17e91fcf1586e6ba108435365a"
     },
-    "recovery_promotion_rows_loaded": 75,
-    "recovery_strict_promotions_applied": 70,
+    "recovery_promotion_rows_loaded": 77,
+    "recovery_strict_promotions_applied": 72,
     "rejected_pair_judgments": 5516,
-    "selected_quality_pairs": 800,
+    "selected_quality_pairs": 802,
     "strict_revocations_enforced": 5,
     "strict_revocations_loaded": 388,
     "strict_revocations_overridden_by_policy": 383
   },
-  "recovery_epoch_distribution": [
-    {
-      "covered_samples": 748,
-      "key": "base_scheduler",
-      "sample_share": 0.9012048192771084,
-      "strict_prompt_groups": 730,
-      "unique_verified_videos": 704
-    },
-    {
-      "covered_samples": 16,
-      "key": "existing_youtube_nonpai_v3_20260714T132924Z",
-      "sample_share": 0.01927710843373494,
-      "strict_prompt_groups": 16,
-      "unique_verified_videos": 16
-    },
-    {
-      "covered_samples": 16,
-      "key": "wisa_verified_nonpai_v1_20260714T0728Z",
-      "sample_share": 0.01927710843373494,
-      "strict_prompt_groups": 10,
-      "unique_verified_videos": 10
-    },
-    {
-      "covered_samples": 13,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w003",
-      "sample_share": 0.01566265060240964,
-      "strict_prompt_groups": 11,
-      "unique_verified_videos": 11
-    },
-    {
-      "covered_samples": 9,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w002",
-      "sample_share": 0.010843373493975903,
-      "strict_prompt_groups": 7,
-      "unique_verified_videos": 7
-    },
-    {
-      "covered_samples": 7,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w004",
-      "sample_share": 0.008433734939759036,
-      "strict_prompt_groups": 7,
-      "unique_verified_videos": 7
-    },
-    {
-      "covered_samples": 6,
-      "key": "existing_risk_recheck_nonpai_v3_20260716",
-      "sample_share": 0.007228915662650603,
-      "strict_prompt_groups": 4,
-      "unique_verified_videos": 3
-    },
-    {
-      "covered_samples": 4,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w005",
-      "sample_share": 0.004819277108433735,
-      "strict_prompt_groups": 4,
-      "unique_verified_videos": 4
-    },
-    {
-      "covered_samples": 4,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w007",
-      "sample_share": 0.004819277108433735,
-      "strict_prompt_groups": 4,
-      "unique_verified_videos": 4
-    },
-    {
-      "covered_samples": 3,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w006",
-      "sample_share": 0.0036144578313253013,
-      "strict_prompt_groups": 3,
-      "unique_verified_videos": 3
-    },
-    {
-      "covered_samples": 2,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w010",
-      "sample_share": 0.0024096385542168677,
-      "strict_prompt_groups": 2,
-      "unique_verified_videos": 2
-    },
-    {
-      "covered_samples": 1,
-      "key": "existing_risk_recheck_nonpai_v4_20260716",
-      "sample_share": 0.0012048192771084338,
-      "strict_prompt_groups": 1,
-      "unique_verified_videos": 1
-    },
-    {
-      "covered_samples": 1,
-      "key": "existing_youtube_nonpai_v3_ctrl_20260714T132924Z_w011",
-      "sample_share": 0.0012048192771084338,
-      "strict_prompt_groups": 1,
-      "unique_verified_videos": 1
-    }
-  ],
   "reuse_distribution": {
     "prompt_groups_per_video": [
       {
-        "count": 740,
+        "count": 742,
         "key": "1",
-        "share": 0.9622886866059818
+        "share": 0.9623865110246433
       },
       {
         "count": 27,
         "key": "2",
-        "share": 0.035110533159947985
+        "share": 0.03501945525291829
       },
       {
         "count": 2,
         "key": "3",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       }
     ],
     "reused_video_count": 43,
     "samples_per_video": [
       {
-        "count": 726,
+        "count": 728,
         "key": "1",
-        "share": 0.9440832249674902
+        "share": 0.9442282749675746
       },
       {
         "count": 27,
         "key": "2",
-        "share": 0.035110533159947985
+        "share": 0.03501945525291829
       },
       {
         "count": 15,
         "key": "3",
-        "share": 0.01950585175552666
+        "share": 0.019455252918287938
       },
       {
         "count": 1,
         "key": "5",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       }
     ]
   },
-  "schema_version": 1,
+  "schema_version": 2,
   "snapshot": {
     "accepted_quality_label": "strict",
     "complete": false,
     "confidence_threshold": 0.85,
-    "generation_id": "v1-f55d5deca521f099-740527-1784207850850815094",
-    "published_at": "2026-07-16T13:18:44.424037Z",
-    "quality_database_snapshot_sha256": "f55d5deca521f099b83f9f63e797cdd76e80d8a1b6cc3140556313645dea51d0",
-    "source_quality_database_stats_sha256": "e2bb2850a867243b6008f70ea8a425bd4e0f3f462e48a9e7f1fd5cbabd049b03"
+    "generation_id": "v1-a2ad6be7b8b5e628-1269943-1784215129764606121",
+    "published_at": "2026-07-16T15:20:11.135346Z",
+    "quality_database_snapshot_sha256": "a2ad6be7b8b5e628564d271ce114d463f19a96a91f2aa379f472f2c2b6c69fd5",
+    "source_quality_database_stats_sha256": "7fb024b5abda7c0968caa918ff301fb6c32acf4471f9cd5e48284dff304d8144"
   },
   "validation": {
     "absolute_paths_exported": false,
@@ -296,391 +195,369 @@
     "all_edges_strict": true,
     "complete_set_equals_edge_set": true,
     "coverage_rows": 1993,
-    "edge_rows": 830,
-    "unique_content_sha256": 769,
+    "edge_rows": 832,
+    "unique_content_sha256": 771,
     "unique_sample_keys": 1993,
-    "videos_rows": 769
+    "videos_rows": 771
   },
   "video_source_distribution": {
     "category": [
       {
         "count": 194,
         "key": "22 · People & Blogs",
-        "share": 0.25227568270481143
+        "share": 0.251621271076524
       },
       {
         "count": 128,
         "key": "17 · Sports",
-        "share": 0.16644993498049415
+        "share": 0.16601815823605706
       },
       {
-        "count": 99,
+        "count": 100,
         "key": "26 · Howto & Style",
-        "share": 0.12873862158647595
+        "share": 0.1297016861219196
       },
       {
-        "count": 96,
+        "count": 97,
         "key": "24 · Entertainment",
-        "share": 0.12483745123537061
+        "share": 0.125810635538262
       },
       {
         "count": 69,
         "key": "28 · Science & Technology",
-        "share": 0.08972691807542263
+        "share": 0.08949416342412451
       },
       {
         "count": 59,
         "key": "27 · Education",
-        "share": 0.07672301690507152
+        "share": 0.07652399481193256
       },
       {
         "count": 23,
         "key": "1 · Film & Animation",
-        "share": 0.02990897269180754
+        "share": 0.029831387808041506
       },
       {
         "count": 22,
         "key": "2 · Autos & Vehicles",
-        "share": 0.02860858257477243
+        "share": 0.028534370946822308
       },
       {
         "count": 21,
         "key": "19 · Travel & Events",
-        "share": 0.027308192457737322
+        "share": 0.027237354085603113
       },
       {
         "count": 13,
         "key": "25 · News & Politics",
-        "share": 0.016905071521456438
+        "share": 0.016861219195849545
       },
       {
         "count": 12,
         "key": "23 · Comedy",
-        "share": 0.015604681404421327
+        "share": 0.01556420233463035
       },
       {
         "count": 10,
         "key": "unknown · Unknown category",
-        "share": 0.013003901170351105
+        "share": 0.01297016861219196
       },
       {
         "count": 8,
         "key": "10 · Music",
-        "share": 0.010403120936280884
+        "share": 0.010376134889753566
       },
       {
         "count": 6,
         "key": "15 · Pets & Animals",
-        "share": 0.007802340702210663
+        "share": 0.007782101167315175
       },
       {
         "count": 6,
         "key": "20 · Gaming",
-        "share": 0.007802340702210663
+        "share": 0.007782101167315175
       },
       {
         "count": 3,
         "key": "29 · Nonprofits & Activism",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       }
     ],
     "definition": [
       {
-        "count": 719,
+        "count": 721,
         "key": "hd",
-        "share": 0.9349804941482445
+        "share": 0.9351491569390402
       },
       {
         "count": 40,
         "key": "sd",
-        "share": 0.05201560468140442
+        "share": 0.05188067444876784
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.013003901170351105
+        "share": 0.01297016861219196
       }
     ],
     "download_cohort": [
       {
-        "count": 447,
+        "count": 448,
         "key": "incremental/batch_0004",
-        "share": 0.5812743823146944
+        "share": 0.5810635538261998
       },
       {
-        "count": 306,
+        "count": 307,
         "key": "incremental/batch_0002",
-        "share": 0.39791937581274384
+        "share": 0.3981841763942931
       },
       {
         "count": 10,
         "key": "other",
-        "share": 0.013003901170351105
+        "share": 0.01297016861219196
       },
       {
         "count": 4,
         "key": "round1_priority",
-        "share": 0.005201560468140442
+        "share": 0.005188067444876783
       },
       {
         "count": 1,
         "key": "incremental/batch_0001",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       },
       {
         "count": 1,
         "key": "incremental/batch_0008",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       }
     ],
     "duration_bucket": [
       {
-        "count": 459,
+        "count": 461,
         "key": "<1 min",
-        "share": 0.5968790637191157
+        "share": 0.5979247730220493
       },
       {
         "count": 136,
         "key": "1–3 min",
-        "share": 0.17685305591677503
+        "share": 0.17639429312581065
       },
       {
         "count": 80,
         "key": "5–10 min",
-        "share": 0.10403120936280884
+        "share": 0.10376134889753567
       },
       {
         "count": 69,
         "key": "3–5 min",
-        "share": 0.08972691807542263
+        "share": 0.08949416342412451
       },
       {
         "count": 15,
         "key": ">10 min",
-        "share": 0.01950585175552666
+        "share": 0.019455252918287938
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.013003901170351105
-      }
-    ],
-    "ingestion_source": [
-      {
-        "count": 700,
-        "key": "benchmark_prompt_rewrite_search",
-        "share": 0.9102730819245773
-      },
-      {
-        "count": 55,
-        "key": "already_downloaded_public_youtube",
-        "share": 0.07152145643693109
-      },
-      {
-        "count": 10,
-        "key": "wisa80k_testing_rag_v1",
-        "share": 0.013003901170351105
-      },
-      {
-        "count": 4,
-        "key": "downloaded_historical_reject_risk_recheck",
-        "share": 0.005201560468140442
+        "share": 0.01297016861219196
       }
     ],
     "language": [
       {
-        "count": 728,
+        "count": 730,
         "key": "en",
-        "share": 0.9466840052015605
+        "share": 0.9468223086900129
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.013003901170351105
+        "share": 0.01297016861219196
       },
       {
         "count": 6,
         "key": "zxx",
-        "share": 0.007802340702210663
+        "share": 0.007782101167315175
       },
       {
         "count": 5,
         "key": "fr",
-        "share": 0.006501950585175552
+        "share": 0.00648508430609598
       },
       {
         "count": 5,
         "key": "hi",
-        "share": 0.006501950585175552
+        "share": 0.00648508430609598
       },
       {
         "count": 3,
         "key": "ja",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       },
       {
         "count": 3,
         "key": "zh",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       },
       {
         "count": 2,
         "key": "id",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 1,
         "key": "ar",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       },
       {
         "count": 1,
         "key": "de",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       },
       {
         "count": 1,
         "key": "es",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       },
       {
         "count": 1,
         "key": "ko",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       },
       {
         "count": 1,
         "key": "nl",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       },
       {
         "count": 1,
         "key": "pl",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       },
       {
         "count": 1,
         "key": "vi",
-        "share": 0.0013003901170351106
+        "share": 0.0012970168612191958
       }
     ],
     "license": [
       {
-        "count": 753,
+        "count": 755,
         "key": "youtube",
-        "share": 0.9791937581274383
+        "share": 0.9792477302204928
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.013003901170351105
+        "share": 0.01297016861219196
       },
       {
         "count": 6,
         "key": "creativeCommon",
-        "share": 0.007802340702210663
+        "share": 0.007782101167315175
       }
     ],
     "top_channels": [
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.013003901170351105
+        "share": 0.01297016861219196
       },
       {
         "count": 5,
         "key": "Motion Array",
-        "share": 0.006501950585175552
+        "share": 0.00648508430609598
       },
       {
         "count": 5,
         "key": "Olympic Games",
-        "share": 0.006501950585175552
+        "share": 0.00648508430609598
       },
       {
         "count": 3,
         "key": "Geek Climber",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       },
       {
         "count": 3,
         "key": "Unisport",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       },
       {
         "count": 3,
         "key": "Volleyball World",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       },
       {
         "count": 3,
         "key": "WildFilmsIndia",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       },
       {
         "count": 3,
         "key": "Zack D. Films",
-        "share": 0.0039011703511053317
+        "share": 0.0038910505836575876
       },
       {
         "count": 2,
         "key": "Bundesliga",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Canadian Space Agency",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Daily Dose Of Internet",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Epic Volleyball",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "European Space Agency, ESA",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Global Triathlon Network",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "GoPro",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Howcast",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "ILoveBasketballTV",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Jeff & Lauren Show",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Jodone",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       },
       {
         "count": 2,
         "key": "Keith Poitier Performance",
-        "share": 0.002600780234070221
+        "share": 0.0025940337224383916
       }
     ]
   }

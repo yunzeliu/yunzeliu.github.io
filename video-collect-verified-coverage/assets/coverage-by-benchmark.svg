@@ -20,7 +20,7 @@
 <text class="small" x="190" y="247">45 / 198</text>
 <text class="label" x="24" y="283">VideoPhy2</text>
 <rect class="track" x="190" y="258" width="640" height="38" rx="12"/>
-<rect class="bar" x="190" y="258" width="361" height="38" rx="12"/>
-<text class="value" x="842" y="283">56.5%</text>
-<text class="small" x="190" y="315">334 / 591</text>
+<rect class="bar" x="190" y="258" width="363" height="38" rx="12"/>
+<text class="value" x="842" y="283">56.9%</text>
+<text class="small" x="190" y="315">336 / 591</text>
 </svg>
