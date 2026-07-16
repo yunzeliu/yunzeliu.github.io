@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+<title id="title">Verified sample coverage by benchmark</title>
+<desc id="desc">Horizontal bars show the percentage of samples with a verified video.</desc>
+<rect width="100%" height="100%" rx="24" fill="#f4f1e8"/>
+<style>text{font-family:system-ui,-apple-system,Segoe UI,sans-serif;fill:#17211d}.label{font-size:21px;font-weight:700}.value{font-size:19px;font-weight:800}.small{font-size:15px;fill:#52615b}.track{fill:#dce2da}.bar{fill:#176b55}</style>
+<text class="label" x="24" y="79">PAI-Bench-G</text>
+<rect class="track" x="190" y="54" width="640" height="38" rx="12"/>
+<rect class="bar" x="190" y="54" width="233" height="38" rx="12"/>
+<text class="value" x="842" y="79">36.5%</text>
+<text class="small" x="190" y="111">381 / 1,044</text>
+<text class="label" x="24" y="147">PhyGenBench</text>
+<rect class="track" x="190" y="122" width="640" height="38" rx="12"/>
+<rect class="bar" x="190" y="122" width="280" height="38" rx="12"/>
+<text class="value" x="842" y="147">43.8%</text>
+<text class="small" x="190" y="179">70 / 160</text>
+<text class="label" x="24" y="215">Physics-IQ</text>
+<rect class="track" x="190" y="190" width="640" height="38" rx="12"/>
+<rect class="bar" x="190" y="190" width="145" height="38" rx="12"/>
+<text class="value" x="842" y="215">22.7%</text>
+<text class="small" x="190" y="247">45 / 198</text>
+<text class="label" x="24" y="283">VideoPhy2</text>
+<rect class="track" x="190" y="258" width="640" height="38" rx="12"/>
+<rect class="bar" x="190" y="258" width="361" height="38" rx="12"/>
+<text class="value" x="842" y="283">56.5%</text>
+<text class="small" x="190" y="315">334 / 591</text>
+</svg>
