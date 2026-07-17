@@ -15,9 +15,9 @@
 <text class="small" x="190" y="179">70 / 160</text>
 <text class="label" x="24" y="215">Physics-IQ</text>
 <rect class="track" x="190" y="190" width="640" height="38" rx="12"/>
-<rect class="bar" x="190" y="190" width="145" height="38" rx="12"/>
-<text class="value" x="842" y="215">22.7%</text>
-<text class="small" x="190" y="247">45 / 198</text>
+<rect class="bar" x="190" y="190" width="155" height="38" rx="12"/>
+<text class="value" x="842" y="215">24.2%</text>
+<text class="small" x="190" y="247">48 / 198</text>
 <text class="label" x="24" y="283">VideoPhy2</text>
 <rect class="track" x="190" y="258" width="640" height="38" rx="12"/>
 <rect class="bar" x="190" y="258" width="367" height="38" rx="12"/>

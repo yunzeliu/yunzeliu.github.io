@@ -26,15 +26,15 @@
     },
     {
       "benchmark": "physics_iq",
-      "coverage_rate": 0.22727272727272727,
-      "covered_samples": 45,
+      "coverage_rate": 0.24242424242424243,
+      "covered_samples": 48,
       "label": "Physics-IQ",
       "policy_qualified_samples": 0,
-      "recovery_samples": 18,
-      "strict_prompt_groups": 15,
+      "recovery_samples": 21,
+      "strict_prompt_groups": 16,
       "total_samples": 198,
-      "uncovered_samples": 153,
-      "unique_verified_videos": 15
+      "uncovered_samples": 150,
+      "unique_verified_videos": 16
     },
     {
       "benchmark": "videophy2",
@@ -55,61 +55,61 @@
       "key": "WISA80K",
       "label_en": "WISA80K",
       "label_zh": "WISA80K",
-      "sample_share": 0.019161676646706587,
+      "sample_share": 0.01909307875894988,
       "strict_prompt_groups": 10,
       "unique_verified_videos": 10,
-      "video_share": 0.012919896640826873
+      "video_share": 0.012903225806451613
     },
     {
-      "covered_samples": 819,
+      "covered_samples": 822,
       "key": "Other",
       "label_en": "Other",
       "label_zh": "其他数据",
-      "sample_share": 0.9808383233532935,
-      "strict_prompt_groups": 795,
-      "unique_verified_videos": 764,
-      "video_share": 0.9870801033591732
+      "sample_share": 0.9809069212410502,
+      "strict_prompt_groups": 796,
+      "unique_verified_videos": 765,
+      "video_share": 0.9870967741935484
     }
   ],
-  "generated_at_utc": "2026-07-17T01:44:01.042212Z",
+  "generated_at_utc": "2026-07-17T02:54:29.963997Z",
   "headline": {
     "median_duration_seconds": 38.0,
-    "prompt_group_coverage_rate": 0.4332615715823466,
-    "prompt_groups_incomplete": 1053,
+    "prompt_group_coverage_rate": 0.43379978471474706,
+    "prompt_groups_incomplete": 1052,
     "prompt_groups_total": 1858,
     "raw_downloaded_unique_files": 9863,
-    "sample_coverage_rate": 0.4189663823381836,
-    "sample_video_edges": 835,
-    "samples_complete": 835,
-    "samples_incomplete": 1158,
+    "sample_coverage_rate": 0.42047165077772203,
+    "sample_video_edges": 838,
+    "samples_complete": 838,
+    "samples_incomplete": 1155,
     "samples_total": 1993,
-    "strict_prompt_groups": 805,
-    "unique_verified_videos": 774,
-    "verified_duration_hours": 24.9225,
-    "verified_file_bytes": 17852881237,
-    "verified_to_raw_rate": 0.07847510899320694
+    "strict_prompt_groups": 806,
+    "unique_verified_videos": 775,
+    "verified_duration_hours": 24.926111111111112,
+    "verified_file_bytes": 17854538387,
+    "verified_to_raw_rate": 0.07857649802291392
   },
   "latest_recovery_wave": {
-    "epoch_id": "existing_risk_recheck_nonpai_v9_20260716",
-    "nonpasses": 32,
+    "epoch_id": "existing_risk_recheck_medium_nonpai_v10_20260716",
+    "nonpasses": 47,
     "pending_pai": 0,
     "publication_state": "published",
-    "quality_database_snapshot_sha256": "f27a7cdb406f81e6bafc44d430665b7aaf5b3eaa7217cfeae7c2293506cfa47e",
+    "quality_database_snapshot_sha256": "6b4cb4b1d7171a9c74891d2892d80029774ed33065c09f7f15111142300f8601",
     "status": "complete",
-    "strict_promotions": 0
+    "strict_promotions": 1
   },
   "qualification_distribution": [
     {
-      "covered_samples": 567,
+      "covered_samples": 570,
       "key": "direct_strict",
-      "sample_share": 0.6790419161676646,
-      "strict_prompt_groups": 537,
-      "unique_verified_videos": 521
+      "sample_share": 0.6801909307875895,
+      "strict_prompt_groups": 538,
+      "unique_verified_videos": 522
     },
     {
       "covered_samples": 268,
       "key": "pai_policy_override",
-      "sample_share": 0.3209580838323353,
+      "sample_share": 0.3198090692124105,
       "strict_prompt_groups": 268,
       "unique_verified_videos": 262
     }
@@ -117,8 +117,8 @@
   "quality_pipeline": {
     "approved_pair_judgments": 730,
     "final_checks_counted": 6246,
-    "groups_exhausted_after_5": 695,
-    "groups_needing_more_search": 715,
+    "groups_exhausted_after_5": 694,
+    "groups_needing_more_search": 714,
     "judgment_rows": 6246,
     "pai_supplemental_review_required": false,
     "pending_downloaded_pairs": 7776,
@@ -129,10 +129,10 @@
       "benchmark": "paibench_g",
       "sha256": "5a353ac5307af49b88aed886d7bea310caf4de17e91fcf1586e6ba108435365a"
     },
-    "recovery_promotion_rows_loaded": 80,
-    "recovery_strict_promotions_applied": 75,
+    "recovery_promotion_rows_loaded": 81,
+    "recovery_strict_promotions_applied": 76,
     "rejected_pair_judgments": 5516,
-    "selected_quality_pairs": 805,
+    "selected_quality_pairs": 806,
     "strict_revocations_enforced": 5,
     "strict_revocations_loaded": 388,
     "strict_revocations_overridden_by_policy": 383
@@ -140,42 +140,42 @@
   "reuse_distribution": {
     "prompt_groups_per_video": [
       {
-        "count": 745,
+        "count": 746,
         "key": "1",
-        "share": 0.962532299741602
+        "share": 0.9625806451612903
       },
       {
         "count": 27,
         "key": "2",
-        "share": 0.03488372093023256
+        "share": 0.03483870967741935
       },
       {
         "count": 2,
         "key": "3",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       }
     ],
-    "reused_video_count": 43,
+    "reused_video_count": 44,
     "samples_per_video": [
       {
         "count": 731,
         "key": "1",
-        "share": 0.9444444444444444
+        "share": 0.9432258064516129
       },
       {
         "count": 27,
         "key": "2",
-        "share": 0.03488372093023256
+        "share": 0.03483870967741935
       },
       {
-        "count": 15,
+        "count": 16,
         "key": "3",
-        "share": 0.01937984496124031
+        "share": 0.02064516129032258
       },
       {
         "count": 1,
         "key": "5",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       }
     ]
   },
@@ -184,10 +184,10 @@
     "accepted_quality_label": "strict",
     "complete": false,
     "confidence_threshold": 0.85,
-    "generation_id": "v1-f27a7cdb406f81e6-1215901-1784252446400909266",
-    "published_at": "2026-07-17T01:42:19.504090Z",
-    "quality_database_snapshot_sha256": "f27a7cdb406f81e6bafc44d430665b7aaf5b3eaa7217cfeae7c2293506cfa47e",
-    "source_quality_database_stats_sha256": "9d6698798a55e55bdfc0bc514fe45017ac9c3cea52a08479efbd7766e8638510"
+    "generation_id": "v1-6b4cb4b1d7171a9c-1317544-1784254222687724062",
+    "published_at": "2026-07-17T02:11:42.729399Z",
+    "quality_database_snapshot_sha256": "6b4cb4b1d7171a9c74891d2892d80029774ed33065c09f7f15111142300f8601",
+    "source_quality_database_stats_sha256": "2f42bf7e04fea563e8cf575062b71e223f07d48eec87f269f11db02b30b3bb59"
   },
   "validation": {
     "absolute_paths_exported": false,
@@ -195,369 +195,369 @@
     "all_edges_strict": true,
     "complete_set_equals_edge_set": true,
     "coverage_rows": 1993,
-    "edge_rows": 835,
-    "unique_content_sha256": 774,
+    "edge_rows": 838,
+    "unique_content_sha256": 775,
     "unique_sample_keys": 1993,
-    "videos_rows": 774
+    "videos_rows": 775
   },
   "video_source_distribution": {
     "category": [
       {
-        "count": 194,
+        "count": 195,
         "key": "22 · People & Blogs",
-        "share": 0.25064599483204136
+        "share": 0.25161290322580643
       },
       {
         "count": 129,
         "key": "17 · Sports",
-        "share": 0.16666666666666666
+        "share": 0.1664516129032258
       },
       {
         "count": 101,
         "key": "26 · Howto & Style",
-        "share": 0.13049095607235142
+        "share": 0.13032258064516128
       },
       {
         "count": 98,
         "key": "24 · Entertainment",
-        "share": 0.12661498708010335
+        "share": 0.12645161290322582
       },
       {
         "count": 69,
         "key": "28 · Science & Technology",
-        "share": 0.08914728682170543
+        "share": 0.08903225806451613
       },
       {
         "count": 59,
         "key": "27 · Education",
-        "share": 0.07622739018087855
+        "share": 0.07612903225806451
       },
       {
         "count": 23,
         "key": "1 · Film & Animation",
-        "share": 0.029715762273901807
+        "share": 0.02967741935483871
       },
       {
         "count": 22,
         "key": "2 · Autos & Vehicles",
-        "share": 0.028423772609819122
+        "share": 0.02838709677419355
       },
       {
         "count": 21,
         "key": "19 · Travel & Events",
-        "share": 0.027131782945736434
+        "share": 0.027096774193548386
       },
       {
         "count": 13,
         "key": "25 · News & Politics",
-        "share": 0.016795865633074936
+        "share": 0.016774193548387096
       },
       {
         "count": 12,
         "key": "23 · Comedy",
-        "share": 0.015503875968992248
+        "share": 0.015483870967741935
       },
       {
         "count": 10,
         "key": "unknown · Unknown category",
-        "share": 0.012919896640826873
+        "share": 0.012903225806451613
       },
       {
         "count": 8,
         "key": "10 · Music",
-        "share": 0.0103359173126615
+        "share": 0.01032258064516129
       },
       {
         "count": 6,
         "key": "15 · Pets & Animals",
-        "share": 0.007751937984496124
+        "share": 0.007741935483870968
       },
       {
         "count": 6,
         "key": "20 · Gaming",
-        "share": 0.007751937984496124
+        "share": 0.007741935483870968
       },
       {
         "count": 3,
         "key": "29 · Nonprofits & Activism",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       }
     ],
     "definition": [
       {
-        "count": 724,
+        "count": 725,
         "key": "hd",
-        "share": 0.9354005167958657
+        "share": 0.9354838709677419
       },
       {
         "count": 40,
         "key": "sd",
-        "share": 0.05167958656330749
+        "share": 0.05161290322580645
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.012919896640826873
+        "share": 0.012903225806451613
       }
     ],
     "download_cohort": [
       {
-        "count": 448,
+        "count": 449,
         "key": "incremental/batch_0004",
-        "share": 0.5788113695090439
+        "share": 0.5793548387096774
       },
       {
         "count": 310,
         "key": "incremental/batch_0002",
-        "share": 0.4005167958656331
+        "share": 0.4
       },
       {
         "count": 10,
         "key": "other",
-        "share": 0.012919896640826873
+        "share": 0.012903225806451613
       },
       {
         "count": 4,
         "key": "round1_priority",
-        "share": 0.00516795865633075
+        "share": 0.005161290322580645
       },
       {
         "count": 1,
         "key": "incremental/batch_0001",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       },
       {
         "count": 1,
         "key": "incremental/batch_0008",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       }
     ],
     "duration_bucket": [
       {
-        "count": 464,
+        "count": 465,
         "key": "<1 min",
-        "share": 0.599483204134367
+        "share": 0.6
       },
       {
         "count": 136,
         "key": "1–3 min",
-        "share": 0.17571059431524547
+        "share": 0.17548387096774193
       },
       {
         "count": 80,
         "key": "5–10 min",
-        "share": 0.10335917312661498
+        "share": 0.1032258064516129
       },
       {
         "count": 69,
         "key": "3–5 min",
-        "share": 0.08914728682170543
+        "share": 0.08903225806451613
       },
       {
         "count": 15,
         "key": ">10 min",
-        "share": 0.01937984496124031
+        "share": 0.01935483870967742
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.012919896640826873
+        "share": 0.012903225806451613
       }
     ],
     "language": [
       {
-        "count": 733,
+        "count": 734,
         "key": "en",
-        "share": 0.9470284237726099
+        "share": 0.9470967741935484
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.012919896640826873
+        "share": 0.012903225806451613
       },
       {
         "count": 6,
         "key": "zxx",
-        "share": 0.007751937984496124
+        "share": 0.007741935483870968
       },
       {
         "count": 5,
         "key": "fr",
-        "share": 0.006459948320413436
+        "share": 0.0064516129032258064
       },
       {
         "count": 5,
         "key": "hi",
-        "share": 0.006459948320413436
+        "share": 0.0064516129032258064
       },
       {
         "count": 3,
         "key": "ja",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 3,
         "key": "zh",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 2,
         "key": "id",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 1,
         "key": "ar",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       },
       {
         "count": 1,
         "key": "de",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       },
       {
         "count": 1,
         "key": "es",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       },
       {
         "count": 1,
         "key": "ko",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       },
       {
         "count": 1,
         "key": "nl",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       },
       {
         "count": 1,
         "key": "pl",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       },
       {
         "count": 1,
         "key": "vi",
-        "share": 0.0012919896640826874
+        "share": 0.0012903225806451613
       }
     ],
     "license": [
       {
-        "count": 758,
+        "count": 759,
         "key": "youtube",
-        "share": 0.979328165374677
+        "share": 0.9793548387096774
       },
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.012919896640826873
+        "share": 0.012903225806451613
       },
       {
         "count": 6,
         "key": "creativeCommon",
-        "share": 0.007751937984496124
+        "share": 0.007741935483870968
       }
     ],
     "top_channels": [
       {
         "count": 10,
         "key": "unknown",
-        "share": 0.012919896640826873
+        "share": 0.012903225806451613
       },
       {
         "count": 5,
         "key": "Motion Array",
-        "share": 0.006459948320413436
+        "share": 0.0064516129032258064
       },
       {
         "count": 5,
         "key": "Olympic Games",
-        "share": 0.006459948320413436
+        "share": 0.0064516129032258064
       },
       {
         "count": 3,
         "key": "Geek Climber",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 3,
         "key": "People Are Awesome",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 3,
         "key": "Unisport",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 3,
         "key": "Volleyball World",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 3,
         "key": "WildFilmsIndia",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 3,
         "key": "Zack D. Films",
-        "share": 0.003875968992248062
+        "share": 0.003870967741935484
       },
       {
         "count": 2,
         "key": "Bundesliga",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "Canadian Space Agency",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "Daily Dose Of Internet",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "Epic Volleyball",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "European Space Agency, ESA",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "Global Triathlon Network",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "GoPro",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "Howcast",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "ILoveBasketballTV",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "Jeff & Lauren Show",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       },
       {
         "count": 2,
         "key": "Jodone",
-        "share": 0.002583979328165375
+        "share": 0.0025806451612903226
       }
     ]
   }
