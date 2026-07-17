@@ -71,7 +71,7 @@
       "video_share": 0.9870967741935484
     }
   ],
-  "generated_at_utc": "2026-07-17T02:54:29.963997Z",
+  "generated_at_utc": "2026-07-17T06:05:50.699824Z",
   "headline": {
     "median_duration_seconds": 38.0,
     "prompt_group_coverage_rate": 0.43379978471474706,
@@ -90,13 +90,13 @@
     "verified_to_raw_rate": 0.07857649802291392
   },
   "latest_recovery_wave": {
-    "epoch_id": "existing_risk_recheck_medium_nonpai_v10_20260716",
-    "nonpasses": 47,
+    "epoch_id": "existing_risk_recheck_medium_breadth_nonpai_v11_20260716",
+    "nonpasses": 48,
     "pending_pai": 0,
     "publication_state": "published",
-    "quality_database_snapshot_sha256": "6b4cb4b1d7171a9c74891d2892d80029774ed33065c09f7f15111142300f8601",
+    "quality_database_snapshot_sha256": "37d54aa8827bbf82d1707e15752193783de2b37cd577545d229e6df1a1ddabde",
     "status": "complete",
-    "strict_promotions": 1
+    "strict_promotions": 0
   },
   "qualification_distribution": [
     {
@@ -184,10 +184,10 @@
     "accepted_quality_label": "strict",
     "complete": false,
     "confidence_threshold": 0.85,
-    "generation_id": "v1-6b4cb4b1d7171a9c-1317544-1784254222687724062",
-    "published_at": "2026-07-17T02:11:42.729399Z",
-    "quality_database_snapshot_sha256": "6b4cb4b1d7171a9c74891d2892d80029774ed33065c09f7f15111142300f8601",
-    "source_quality_database_stats_sha256": "2f42bf7e04fea563e8cf575062b71e223f07d48eec87f269f11db02b30b3bb59"
+    "generation_id": "v1-37d54aa8827bbf82-749797-1784258713431241782",
+    "published_at": "2026-07-17T03:27:37.472087Z",
+    "quality_database_snapshot_sha256": "37d54aa8827bbf82d1707e15752193783de2b37cd577545d229e6df1a1ddabde",
+    "source_quality_database_stats_sha256": "b082878087743da2de663cdcf5837c2123b104a024e63ad066880b56bf7d173e"
   },
   "validation": {
     "absolute_paths_exported": false,
