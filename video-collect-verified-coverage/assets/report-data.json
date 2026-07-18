@@ -71,7 +71,7 @@
       "video_share": 0.9871299871299871
     }
   ],
-  "generated_at_utc": "2026-07-17T09:36:12.244773Z",
+  "generated_at_utc": "2026-07-18T03:00:06.435193Z",
   "headline": {
     "median_duration_seconds": 38.0,
     "prompt_group_coverage_rate": 0.43487621097954793,
@@ -90,11 +90,11 @@
     "verified_to_raw_rate": 0.07877927608232789
   },
   "latest_recovery_wave": {
-    "epoch_id": "existing_risk_recheck_medium_low_global_breadth_nonpai_v16_20260717",
-    "nonpasses": 21,
+    "epoch_id": "existing_risk_recheck_second_pass_breadth_nonpai_v17_20260717",
+    "nonpasses": 48,
     "pending_pai": 0,
     "publication_state": "published",
-    "quality_database_snapshot_sha256": "e5a89367e24027ed5ec13ec4af8ac2281de6739bd0d2820e094e7094b339892d",
+    "quality_database_snapshot_sha256": "0908d334a6a37b6128798ca6268f2869458e8f9f06d561ace16f0d60754794ba",
     "status": "complete",
     "strict_promotions": 0
   },
@@ -118,7 +118,7 @@
     "approved_pair_judgments": 730,
     "final_checks_counted": 6246,
     "groups_exhausted_after_5": 692,
-    "groups_needing_more_search": 712,
+    "groups_needing_more_search": 713,
     "judgment_rows": 6246,
     "pai_supplemental_review_required": false,
     "pending_downloaded_pairs": 7776,
@@ -184,10 +184,10 @@
     "accepted_quality_label": "strict",
     "complete": false,
     "confidence_threshold": 0.85,
-    "generation_id": "v1-e5a89367e24027ed-1495639-1784280527887673791",
-    "published_at": "2026-07-17T09:29:44.825250Z",
-    "quality_database_snapshot_sha256": "e5a89367e24027ed5ec13ec4af8ac2281de6739bd0d2820e094e7094b339892d",
-    "source_quality_database_stats_sha256": "c46abde43f499dbe48b196c34c7f460237c9fd08879aa1f8ef3e1e3ca54011cb"
+    "generation_id": "v1-0908d334a6a37b61-955053-1784282334829525776",
+    "published_at": "2026-07-17T10:00:30.181316Z",
+    "quality_database_snapshot_sha256": "0908d334a6a37b6128798ca6268f2869458e8f9f06d561ace16f0d60754794ba",
+    "source_quality_database_stats_sha256": "381e911bd5b2600a58154bc45f13edf9b2cc9160c69b502e7570107a36711856"
   },
   "validation": {
     "absolute_paths_exported": false,
