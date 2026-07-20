@@ -117,9 +117,9 @@
     }
   ],
   "finished_attempting": true,
-  "generated_at": "2026-07-20T02:21:50.626523+00:00",
+  "generated_at": "2026-07-20T03:03:07.929600+00:00",
   "language": "zh-CN",
-  "queue_manifest_sha256": "2aa2274a95123344e6efbb5c9ff2e8dec955adc6c7688eb64f868c73db0f5732",
+  "queue_manifest_sha256": "106337115348a864c4033f10dd52a81a688c0d35d3fb972d17d822c774a31a45",
   "rounds": [
     {
       "array_job_id": 10997670,
@@ -137,9 +137,9 @@
       "submission_status": "failed"
     },
     {
-      "array_job_id": 11006045,
+      "array_job_id": 11006755,
       "errors": 130,
-      "finalizer_job_id": 11006061,
+      "finalizer_job_id": 11006771,
       "new_strict_results": 36,
       "pending_at_build": 236,
       "phase": "all",
@@ -165,10 +165,25 @@
       "state_sequence": 14,
       "strict_reused_at_build": 608,
       "submission_status": "仅构建队列"
+    },
+    {
+      "array_job_id": null,
+      "errors": 0,
+      "finalizer_job_id": null,
+      "new_strict_results": 0,
+      "pending_at_build": 200,
+      "phase": "all",
+      "postcheck_failed": 0,
+      "prompt_group_tasks": 808,
+      "queue_id": "batch_ff5043a8b4092f0bd822",
+      "round": 4,
+      "state_sequence": 15,
+      "strict_reused_at_build": 0,
+      "submission_status": "仅构建队列"
     }
   ],
   "schema_version": 1,
-  "source_queue_id": "batch_5d1c84a44065e75258aa",
+  "source_queue_id": "batch_ff5043a8b4092f0bd822",
   "source_verified_generation_id": "v1-0908d334a6a37b61-955053-1784282334829525776",
   "sources": [
     {
