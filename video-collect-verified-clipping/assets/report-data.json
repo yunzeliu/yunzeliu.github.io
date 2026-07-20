@@ -1,8 +1,8 @@
 {
   "all_result_file_statuses": {
-    "error": 254,
-    "postcheck_failed": 151,
-    "postcheck_strict": 608
+    "error": 209,
+    "postcheck_failed": 160,
+    "postcheck_strict": 644
   },
   "audit_notes": [
     "统计基于当前 verified generation 与冻结 clipping queue；样本、group、视频分别去重。",
@@ -13,36 +13,36 @@
   "benchmarks": [
     {
       "benchmark": "paibench_g",
-      "strict_groups": 282,
-      "strict_samples": 282,
-      "strict_videos": 274,
+      "strict_groups": 302,
+      "strict_samples": 302,
+      "strict_videos": 293,
       "total_groups": 381,
       "total_samples": 381,
       "total_videos": 368
     },
     {
       "benchmark": "phygenbench",
-      "strict_groups": 48,
-      "strict_samples": 48,
-      "strict_videos": 46,
+      "strict_groups": 51,
+      "strict_samples": 51,
+      "strict_videos": 49,
       "total_groups": 72,
       "total_samples": 72,
       "total_videos": 69
     },
     {
       "benchmark": "physics_iq",
-      "strict_groups": 12,
-      "strict_samples": 36,
-      "strict_videos": 12,
+      "strict_groups": 13,
+      "strict_samples": 39,
+      "strict_videos": 13,
       "total_groups": 16,
       "total_samples": 48,
       "total_videos": 16
     },
     {
       "benchmark": "videophy2",
-      "strict_groups": 266,
-      "strict_samples": 266,
-      "strict_videos": 262,
+      "strict_groups": 278,
+      "strict_samples": 278,
+      "strict_videos": 271,
       "total_groups": 339,
       "total_samples": 339,
       "total_videos": 331
@@ -65,20 +65,20 @@
       "videos": 777
     },
     "failed": {
-      "groups": 200,
-      "sample_edges": 208,
-      "samples": 208,
-      "videos": 198
+      "groups": 164,
+      "sample_edges": 170,
+      "samples": 170,
+      "videos": 163
     },
-    "remaining_groups": 200,
+    "remaining_groups": 164,
     "strict": {
-      "groups": 608,
-      "sample_edges": 632,
-      "samples": 632,
-      "videos": 589
+      "groups": 644,
+      "sample_edges": 670,
+      "samples": 670,
+      "videos": 621
     },
-    "strict_group_percent": 75.25,
-    "strict_video_percent": 75.8,
+    "strict_group_percent": 79.7,
+    "strict_video_percent": 79.92,
     "total": {
       "groups": 808,
       "sample_edges": 840,
@@ -88,38 +88,38 @@
   },
   "failure_reasons": [
     {
-      "count": 70,
+      "count": 79,
       "reason": "strict clip postcheck failed after maximum_window_expansions"
     },
     {
-      "count": 64,
+      "count": 50,
       "reason": "long-span boundary is uncertain or changes occurrence"
     },
     {
-      "count": 36,
+      "count": 22,
       "reason": "coarse localization did not establish one complete occurrence"
     },
     {
-      "count": 21,
+      "count": 9,
       "reason": "fine localization did not retain one complete required chain"
     },
     {
-      "count": 6,
-      "reason": "long-span range occurrence is below localization confidence threshold"
+      "count": 2,
+      "reason": "start boundary lies on an unbracketed interior edge"
     },
     {
-      "count": 2,
+      "count": 1,
       "reason": "source frame cadence cannot meet localization precision policy"
     },
     {
       "count": 1,
-      "reason": "end boundary lies on an unbracketed interior edge"
+      "reason": "long-span range occurrence is below localization confidence threshold"
     }
   ],
   "finished_attempting": true,
-  "generated_at": "2026-07-20T03:03:07.929600+00:00",
+  "generated_at": "2026-07-20T04:10:21.768042+00:00",
   "language": "zh-CN",
-  "queue_manifest_sha256": "106337115348a864c4033f10dd52a81a688c0d35d3fb972d17d822c774a31a45",
+  "queue_manifest_sha256": "e7a6e027fc0e413e1562af16e82fc2546364eaea6fca1896cf54dcf03808152b",
   "rounds": [
     {
       "array_job_id": 10997670,
@@ -137,13 +137,13 @@
       "submission_status": "failed"
     },
     {
-      "array_job_id": 11006755,
-      "errors": 130,
-      "finalizer_job_id": 11006771,
-      "new_strict_results": 36,
+      "array_job_id": 11006805,
+      "errors": 85,
+      "finalizer_job_id": 11006806,
+      "new_strict_results": 72,
       "pending_at_build": 236,
       "phase": "all",
-      "postcheck_failed": 70,
+      "postcheck_failed": 79,
       "prompt_group_tasks": 808,
       "queue_id": "batch_912f96ade3c3f917cd3f",
       "round": 2,
@@ -180,10 +180,25 @@
       "state_sequence": 15,
       "strict_reused_at_build": 0,
       "submission_status": "仅构建队列"
+    },
+    {
+      "array_job_id": null,
+      "errors": 0,
+      "finalizer_job_id": null,
+      "new_strict_results": 0,
+      "pending_at_build": 164,
+      "phase": "all",
+      "postcheck_failed": 0,
+      "prompt_group_tasks": 808,
+      "queue_id": "batch_019c0bab7227ebf83f29",
+      "round": 5,
+      "state_sequence": 16,
+      "strict_reused_at_build": 36,
+      "submission_status": "仅构建队列"
     }
   ],
   "schema_version": 1,
-  "source_queue_id": "batch_ff5043a8b4092f0bd822",
+  "source_queue_id": "batch_019c0bab7227ebf83f29",
   "source_verified_generation_id": "v1-0908d334a6a37b61-955053-1784282334829525776",
   "sources": [
     {
@@ -197,17 +212,17 @@
     },
     {
       "source": "其他数据",
-      "strict_groups": 602,
-      "strict_samples": 624,
-      "strict_videos": 583,
+      "strict_groups": 638,
+      "strict_samples": 662,
+      "strict_videos": 615,
       "total_groups": 798,
       "total_samples": 824,
       "total_videos": 767
     }
   ],
   "task_statuses": {
-    "error": 130,
-    "postcheck_failed": 70,
-    "postcheck_strict": 608
+    "error": 85,
+    "postcheck_failed": 79,
+    "postcheck_strict": 644
   }
 }
