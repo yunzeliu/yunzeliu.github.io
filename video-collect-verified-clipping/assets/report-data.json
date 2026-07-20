@@ -1,8 +1,8 @@
 {
   "all_result_file_statuses": {
-    "error": 199,
-    "postcheck_failed": 126,
-    "postcheck_strict": 587
+    "error": 254,
+    "postcheck_failed": 151,
+    "postcheck_strict": 608
   },
   "audit_notes": [
     "统计基于当前 verified generation 与冻结 clipping queue；样本、group、视频分别去重。",
@@ -13,17 +13,17 @@
   "benchmarks": [
     {
       "benchmark": "paibench_g",
-      "strict_groups": 272,
-      "strict_samples": 272,
-      "strict_videos": 267,
+      "strict_groups": 282,
+      "strict_samples": 282,
+      "strict_videos": 274,
       "total_groups": 381,
       "total_samples": 381,
       "total_videos": 368
     },
     {
       "benchmark": "phygenbench",
-      "strict_groups": 47,
-      "strict_samples": 47,
+      "strict_groups": 48,
+      "strict_samples": 48,
       "strict_videos": 46,
       "total_groups": 72,
       "total_samples": 72,
@@ -40,9 +40,9 @@
     },
     {
       "benchmark": "videophy2",
-      "strict_groups": 256,
-      "strict_samples": 256,
-      "strict_videos": 255,
+      "strict_groups": 266,
+      "strict_samples": 266,
+      "strict_videos": 262,
       "total_groups": 339,
       "total_samples": 339,
       "total_videos": 331
@@ -59,26 +59,26 @@
   "complete": false,
   "coverage": {
     "attempted": {
-      "groups": 793,
-      "sample_edges": 825,
-      "samples": 825,
+      "groups": 808,
+      "sample_edges": 840,
+      "samples": 840,
       "videos": 777
     },
     "failed": {
-      "groups": 206,
-      "sample_edges": 214,
-      "samples": 214,
-      "videos": 205
+      "groups": 200,
+      "sample_edges": 208,
+      "samples": 208,
+      "videos": 198
     },
-    "remaining_groups": 221,
+    "remaining_groups": 200,
     "strict": {
-      "groups": 587,
-      "sample_edges": 611,
-      "samples": 611,
-      "videos": 579
+      "groups": 608,
+      "sample_edges": 632,
+      "samples": 632,
+      "videos": 589
     },
-    "strict_group_percent": 72.65,
-    "strict_video_percent": 74.52,
+    "strict_group_percent": 75.25,
+    "strict_video_percent": 75.8,
     "total": {
       "groups": 808,
       "sample_edges": 840,
@@ -88,7 +88,7 @@
   },
   "failure_reasons": [
     {
-      "count": 79,
+      "count": 70,
       "reason": "strict clip postcheck failed after maximum_window_expansions"
     },
     {
@@ -96,7 +96,7 @@
       "reason": "long-span boundary is uncertain or changes occurrence"
     },
     {
-      "count": 33,
+      "count": 36,
       "reason": "coarse localization did not establish one complete occurrence"
     },
     {
@@ -116,10 +116,10 @@
       "reason": "end boundary lies on an unbracketed interior edge"
     }
   ],
-  "finished_attempting": false,
-  "generated_at": "2026-07-20T01:53:17.516300+00:00",
+  "finished_attempting": true,
+  "generated_at": "2026-07-20T02:21:50.626523+00:00",
   "language": "zh-CN",
-  "queue_manifest_sha256": "0aa383856f1bacdd2330354cd4c550fa18ad71f856c7648e2b6f3199ee1f20bf",
+  "queue_manifest_sha256": "2aa2274a95123344e6efbb5c9ff2e8dec955adc6c7688eb64f868c73db0f5732",
   "rounds": [
     {
       "array_job_id": 10997670,
@@ -138,22 +138,37 @@
     },
     {
       "array_job_id": 11006045,
-      "errors": 75,
+      "errors": 130,
       "finalizer_job_id": 11006061,
-      "new_strict_results": 15,
+      "new_strict_results": 36,
       "pending_at_build": 236,
       "phase": "all",
-      "postcheck_failed": 45,
+      "postcheck_failed": 70,
       "prompt_group_tasks": 808,
       "queue_id": "batch_912f96ade3c3f917cd3f",
       "round": 2,
       "state_sequence": 13,
       "strict_reused_at_build": 572,
-      "submission_status": "submitted"
+      "submission_status": "failed"
+    },
+    {
+      "array_job_id": null,
+      "errors": 0,
+      "finalizer_job_id": null,
+      "new_strict_results": 0,
+      "pending_at_build": 200,
+      "phase": "all",
+      "postcheck_failed": 0,
+      "prompt_group_tasks": 808,
+      "queue_id": "batch_5d1c84a44065e75258aa",
+      "round": 3,
+      "state_sequence": 14,
+      "strict_reused_at_build": 608,
+      "submission_status": "仅构建队列"
     }
   ],
   "schema_version": 1,
-  "source_queue_id": "batch_912f96ade3c3f917cd3f",
+  "source_queue_id": "batch_5d1c84a44065e75258aa",
   "source_verified_generation_id": "v1-0908d334a6a37b61-955053-1784282334829525776",
   "sources": [
     {
@@ -167,18 +182,17 @@
     },
     {
       "source": "其他数据",
-      "strict_groups": 581,
-      "strict_samples": 603,
-      "strict_videos": 573,
+      "strict_groups": 602,
+      "strict_samples": 624,
+      "strict_videos": 583,
       "total_groups": 798,
       "total_samples": 824,
       "total_videos": 767
     }
   ],
   "task_statuses": {
-    "error": 127,
-    "pending_not_attempted": 15,
-    "postcheck_failed": 79,
-    "postcheck_strict": 587
+    "error": 130,
+    "postcheck_failed": 70,
+    "postcheck_strict": 608
   }
 }
