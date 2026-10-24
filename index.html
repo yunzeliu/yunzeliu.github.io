@@ -97,6 +97,103 @@
 
         .bio-text { font-size: 1.05em; color: #333; margin-bottom: 30px; text-align: justify;}
 
+        /* Recent Work */
+        .recent-work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+        .recent-work-card {
+            --accent: #2f6b62;
+            overflow: hidden;
+            border: 1px solid #e4e9e8;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 5px 18px rgba(35, 55, 65, 0.07);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .recent-work-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 9px 24px rgba(35, 55, 65, 0.11);
+        }
+        .recent-work-card.physis { --accent: #2e728c; }
+        .recent-work-card.robota { --accent: #237a53; }
+        .recent-work-visual {
+            display: block;
+            height: 100px;
+            overflow: hidden;
+            background: #f3f7f8;
+            border-bottom: 1px solid #edf0ef;
+        }
+        .recent-work-visual img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .recent-work-card.robota .recent-work-visual img { object-position: center top; }
+        .recent-work-card.physis .recent-work-visual img {
+            object-fit: contain;
+            box-sizing: border-box;
+            padding: 4px;
+        }
+        .recent-work-body {
+            display: grid;
+            grid-template-columns: max-content minmax(0, 1fr);
+            column-gap: 9px;
+            padding: 10px 12px 12px;
+        }
+        .recent-work-label,
+        .recent-work-title,
+        .recent-work-desc { grid-column: 1 / -1; }
+        .recent-work-label {
+            color: var(--accent);
+            font-size: 0.62em;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .recent-work-title {
+            display: block;
+            margin: 1px 0 4px;
+            color: #22313a;
+            font-size: 0.95em;
+            font-weight: 750;
+            line-height: 1.2;
+        }
+        .recent-work-desc {
+            margin: 0 0 7px;
+            color: #5b646a;
+            font-size: 0.78em;
+            line-height: 1.4;
+        }
+        .recent-work-highlight {
+            grid-column: 1;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 5px;
+            padding: 4px 6px;
+            border-radius: 4px;
+            background: #f2f7f6;
+            color: var(--accent);
+        }
+        .recent-work-highlight strong { font-size: 0.9em; }
+        .recent-work-highlight span { font-size: 0.68em; line-height: 1.2; }
+        .recent-work-links {
+            grid-column: 2;
+            align-self: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 9px;
+        }
+        .recent-work-links a {
+            color: var(--accent);
+            font-size: 0.68em;
+            font-weight: 750;
+            text-transform: uppercase;
+        }
+
         /* News List */
         .news-container {
             max-height: 200px;
@@ -107,9 +204,26 @@
             border-radius: 4px;
         }
         .news-list { list-style: none; padding: 0; margin: 0; }
-        .news-list li { margin-bottom: 10px; font-size: 0.95em; display: flex; }
+        .news-list li {
+            position: relative;
+            display: block;
+            margin-bottom: 10px;
+            padding-left: 95px;
+            font-size: 0.95em;
+            line-height: 1.55;
+        }
         .news-list li:last-child { margin-bottom: 0; }
-        .news-date { font-weight: bold; min-width: 85px; color: #666; font-family: monospace; }
+        .news-list li a { white-space: nowrap; }
+        .news-date {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 0;
+            color: #666;
+            font-family: monospace;
+            font-weight: bold;
+            white-space: nowrap;
+        }
 
         /* Publications */
         .publication-item {
@@ -153,6 +267,17 @@
             main { padding: 30px 20px; }
             .publication-item { flex-direction: column; }
             .pub-thumb { width: 100%; max-width: 300px; margin-bottom: 15px; }
+        }
+
+        @media (max-width: 620px) {
+            .recent-work-grid { grid-template-columns: 1fr; }
+            .recent-work-visual { height: 120px; }
+            .news-list li { padding-left: 0; }
+            .news-date {
+                position: static;
+                display: block;
+                margin-bottom: 2px;
+            }
         }
     </style>
 </head>
@@ -223,7 +348,7 @@
             <p>
                 I am currently a Research Intern at
                 <a href="https://research.nvidia.com/">NVIDIA Research</a>, where I work on
-                in-context learning for Physical AI, mentored by Dr.
+                Physical Agents and Physical RSI, mentored by Dr.
                 <a href="https://han-cai.github.io/">Han Cai</a>, with guidance from Prof.
                 <a href="https://hanlab.mit.edu/songhan">Song Han</a>.
                 Previously, I was a Researcher at
@@ -234,40 +359,93 @@
             </p>
 
             <p>
-                My research focuses on <strong>self-evolving Physical AI</strong>: developing embodied
-                agents that learn in context, adapt from experience, and continually improve through
-                interaction with the physical world. My research spans three complementary directions:
+                My research centers on <strong>Physical Agents</strong> and
+                <strong>Physical RSI</strong>: building embodied
+                systems that learn from physical experience, adapt in context, and continually improve
+                both their task-execution capabilities and the mechanisms by which they learn.
             </p>
 
             <ul style="line-height: 1.8;">
                 <li>
-                    <strong>4D World Understanding and Egocentric HOI:</strong>
-                    modeling dynamic environments and human–object interactions across space and time,
-                    including <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_HOI4D_A_4D_Egocentric_Dataset_for_Category-Level_Human-Object_Interaction_CVPR_2022_paper.pdf">HOI4D</a> (CVPR 2022),
-                    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_LeaF_Learning_Frames_for_4D_Point_Cloud_Sequence_Understanding_ICCV_2023_paper.pdf">LeaF</a> (ICCV 2023), and
-                    <a href="https://arxiv.org/pdf/2404.01081">PhysReaction</a> (ACM MM 2024 Oral).
+                    <strong>Physical Agents:</strong>
+                    developing action-aware representations and experience retrieval for embodied reasoning,
+                    in-context learning, and long-horizon interaction, including
+                    <a href="https://robota-ai.github.io/robota-embed/">Robota-Embed</a>.
                 </li>
                 <li>
-                    <strong>Unified Multimodal Representation Learning:</strong>
-                    learning transferable representations across vision, language, and 3D/4D signals,
-                    including <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Contrastive_Multimodal_Fusion_With_TupleInfoNCE_ICCV_2021_paper.pdf">TupleInfoNCE</a> (ICCV 2021) and
-                    <a href="https://arxiv.org/pdf/2401.09057">CrossVideo</a> (ICRA 2024), and
-                    <a href="https://arxiv.org/pdf/2605.26641">OmniRetriever</a> (EMNLP 2026 Main, Oral).
-                </li>
-                <li>
-                    <strong>Efficient Multimodal Intelligence:</strong>
-                    building efficient models for visual and long-context understanding,
-                    including <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_MAP_Unleashing_Hybrid_Mamba-Transformer_Vision_Backbones_Potential_with_Masked_Autoregressive_CVPR_2025_paper.pdf">MAP</a> (CVPR 2025),
-                    <a href="https://arxiv.org/pdf/2503.12542">ST-Think</a> (WACV 2026),
-                    <a href="https://arxiv.org/pdf/2510.07915">MARC</a> (ICLR 2026), and
-                    <a href="https://arxiv.org/pdf/2605.08271">MAGIC-Video</a> (NeurIPS 2026).
+                    <strong>Physical RSI:</strong>
+                    building systems that turn interaction, experience, and feedback into better representations,
+                    context, data, and learning strategies, including
+                    <a href="https://physis-intelligence.github.io/physis-lang-web/">Physis-Lang</a>.
                 </li>
             </ul>
+
+            <p>
+                These directions build on my earlier work in
+                <strong>4D world understanding and egocentric human–object interaction</strong>
+                (<a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_HOI4D_A_4D_Egocentric_Dataset_for_Category-Level_Human-Object_Interaction_CVPR_2022_paper.pdf">HOI4D</a>, CVPR 2022;
+                <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_LeaF_Learning_Frames_for_4D_Point_Cloud_Sequence_Understanding_ICCV_2023_paper.pdf">LeaF</a>, ICCV 2023;
+                <a href="https://arxiv.org/pdf/2404.01081">PhysReaction</a>, ACM MM 2024 Oral),
+                <strong>multimodal representation learning</strong>
+                (<a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Contrastive_Multimodal_Fusion_With_TupleInfoNCE_ICCV_2021_paper.pdf">TupleInfoNCE</a>, ICCV 2021;
+                <a href="https://arxiv.org/pdf/2401.09057">CrossVideo</a>, ICRA 2024;
+                <a href="https://arxiv.org/pdf/2605.26641">OmniRetriever</a>, EMNLP 2026 Oral),
+                and <strong>efficient multimodal and long-context intelligence</strong>
+                (<a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_MAP_Unleashing_Hybrid_Mamba-Transformer_Vision_Backbones_Potential_with_Masked_Autoregressive_CVPR_2025_paper.pdf">MAP</a>, CVPR 2025;
+                <a href="https://arxiv.org/pdf/2510.07915">MARC</a>, ICLR 2026;
+                <a href="https://arxiv.org/pdf/2503.12542">ST-Think</a>, WACV 2026).
+            </p>
+        </div>
+
+        <h2 class="section-header">Recent Work</h2>
+        <div class="recent-work-grid">
+            <article class="recent-work-card robota">
+                <a class="recent-work-visual" href="https://robota-ai.github.io/robota-embed/">
+                    <img src="images/robota-embed.jpg" alt="Robota-Embed for Physical Agents" loading="lazy">
+                </a>
+                <div class="recent-work-body">
+                    <span class="recent-work-label">Physical Agents</span>
+                    <a class="recent-work-title" href="https://robota-ai.github.io/robota-embed/">Robota-Embed</a>
+                    <p class="recent-work-desc">
+                        VLA embeddings for experience retrieval, robot in-context learning, and task-local evolution.
+                    </p>
+                    <div class="recent-work-highlight">
+                        <strong>First</strong><span>VLA embedding model</span>
+                    </div>
+                    <div class="recent-work-links">
+                        <a href="https://robota-ai.github.io/robota-embed/">Project</a>
+                        <a href="https://arxiv.org/pdf/2610.19495">Paper</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recent-work-card physis">
+                <a class="recent-work-visual" href="https://physis-intelligence.github.io/physis-lang-web/">
+                    <img src="images/physis-lang.png" alt="Physis-Lang self-evolving physical language framework" loading="lazy">
+                </a>
+                <div class="recent-work-body">
+                    <span class="recent-work-label">Physical RSI</span>
+                    <a class="recent-work-title" href="https://physis-intelligence.github.io/physis-lang-web/">Physis-Lang</a>
+                    <p class="recent-work-desc">
+                        Self-evolving physical language for video world model curation, training, and generation.
+                    </p>
+                    <div class="recent-work-highlight">
+                        <strong>#1 &amp; #2</strong><span>Physics-IQ</span>
+                    </div>
+                    <div class="recent-work-links">
+                        <a href="https://physis-intelligence.github.io/physis-lang-web/">Project</a>
+                        <a href="https://arxiv.org/pdf/2609.40358">Paper</a>
+                        <a href="https://github.com/Physis-Intelligence/Physis-Lang">Code</a>
+                    </div>
+                </div>
+            </article>
         </div>
 
         <h2 class="section-header">News</h2>
         <div class="news-container">
             <ul class="news-list">
+                <li><span class="news-date">Oct 2026</span> Released <strong><a href="https://robota-ai.github.io/robota-embed/">Robota-Embed</a></strong>, the first unified VLA embedding model for robot in-context learning and evolution.</li>
+                <li><span class="news-date">Sep 2026</span> <strong><a href="https://physis-intelligence.github.io/physis-lang-web/">Physis-Lang</a></strong> ranked #1 and #2 on the public Physics-IQ Verified leaderboard with Cosmos3-Super and Cosmos3-Nano.</li>
                 <li><span class="news-date">Sep 2026</span> MAGIC-Video accepted to <strong>&nbsp;NeurIPS 2026</strong>.</li>
                 <li><span class="news-date">Aug 2026</span> OmniRetriever accepted to <strong>&nbsp;EMNLP 2026 Main Conference (Oral)</strong>.</li>
                 <li><span class="news-date">Aug 2026</span> HOI-JEPA accepted to <strong>&nbsp;ECCV-HuMoWM 2026</strong>.</li>
